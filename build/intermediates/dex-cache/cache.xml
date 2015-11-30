@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-f76b9f29bbdccc0e31779801ff728ed1924f3596.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\pre-dexed\release\classes-940cf950143923b8313f8d0484edc0a1a9ffef00.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\pre-dexed\debug\classes-f2f350d4a8767cf111bcddb7430c9390fe64d912.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\pre-dexed\release\support-annotations-23.1.0-0e2e0f7014737f84bb3db3ed6b985fc18acf3bc1.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\pre-dexed\release\classes-71b14d32820e188abca387924fb731c987fced00.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\pre-dexed\debug\classes-8cb7bf1590bd43116d48c69bceaabcf4e886293a.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\pre-dexed\debug\classes-db3a69f95dce3b6d9d141cd66c3d71422b131a1c.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\fefochico\Documents\GitHub\DailySelfie\DailaySelfie\app\build\intermediates\pre-dexed\debug\classes-60c7c5144bf6231043bf7ede178840b0f4ad8267.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\pre-dexed\release\classes-8dbf797c0d82d7c7905dc17a901ba66a84a32ce7.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\pre-dexed\release\classes-2899c2529e8464230713731f8722b981866c1cc0.jar" />
+    </item>
+    <item
+        jar="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\fefochico\Downloads\coursera-android-labs-master\DailySelfie2\app\build\intermediates\pre-dexed\release\internal_impl-23.1.0-421fe4546c446ac4694201112a2c98cf2e3b09c1.jar" />
+    </item>
+
+</items>
