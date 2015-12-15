@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
@@ -71,45 +72,21 @@ public class InfoViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View itemLayout;
-        if(convertView==null) {
-            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            itemLayout = inflater.inflate(R.layout.element, parent, false);
-        }else{
-            itemLayout = convertView;
-        }
-        //String path= list.get(position);
-        File auxFile= new File(String.valueOf(list.get(position)));
-        //path= path.substring(path.indexOf("/")+1,path.length());
-        //path= path.substring(path.indexOf("/")+1,path.length());
-        //path=File.separator+path;
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        itemLayout = inflater.inflate(R.layout.element, parent, false);
 
+        File auxFile= new File(String.valueOf(list.get(position)));
         TextView tv= (TextView) itemLayout.findViewById(R.id.text);
         tv.setText(auxFile.getName());
 
-        //String path= listDir.get(position);
-        //path= path.substring(path.indexOf(File.separator)+1, path.length());
-        //path= path.substring(path.indexOf(File.separator)+1, path.length());
 
-        /*long selectedImageUri = ContentUris.parseId(Uri.fromFile(auxFile));
-;        Bitmap bm = MediaStore.Images.Thumbnails.getThumbnail(
-                mContext.getContentResolver(), selectedImageUri, MediaStore.Images.Thumbnails.MICRO_KIND,
-                null)
-        */
+        String dir= String.valueOf(list.get(position));
+        ProgressBar pb= (ProgressBar) itemLayout.findViewById(R.id.progress);
 
-        //Bitmap bm = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(auxFile.getPath()), 64, 64);
+        new Thread(new LoadIconTask(itemLayout,pb,R.id.picture,dir)).start();
 
-
-
-        ImageView iv = (ImageView) itemLayout.findViewById(R.id.picture);
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize=15;
-        String path= auxFile.getAbsolutePath();
-        path= path.substring(path.indexOf(File.separator)+1, path.length());
-        path= path.substring(path.indexOf(File.separator)+1, path.length());
-        iv.setImageBitmap(BitmapFactory.decodeFile(path,options));
         return itemLayout;
 
     }
-
 
 }

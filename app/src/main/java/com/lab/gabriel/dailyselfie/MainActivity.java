@@ -1,45 +1,45 @@
 package com.lab.gabriel.dailyselfie;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Context;
-import android.content.ContextWrapper;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.SystemClock;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
+
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class MainActivity extends AppCompatActivity {
     private static final int CAPTURE_IMAGE_ACTIVITY_REQ = 100;
     private Uri fileUri;
     private InternalFileWriteRead ifwr;
     private String FILENAME = "photoList";
+    private static final long INITIAL_ALARM_DELAY= 24*60*60 * 1000L;
     private ListView lv;
     private Cursor mImageCursor;
     private ArrayList<String> list;
     private InfoViewAdapter mAdapter;
-    private Notification mNotification;
+    Intent intent;
+    PendingIntent mContentIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mNotification= new Notification(getApplicationContext());
+        /////////////////////////////////NEW
+        Intent intent= new Intent(getApplicationContext(), MainActivity.class);
+        mContentIntent = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
+        addNotification(getNotification("Time to take a photo!"), 60*1000);
+        /////////////////////////////////FINNEW
 
         ifwr= new InternalFileWriteRead(getApplicationContext(), FILENAME);
         list = ifwr.readName();
@@ -150,7 +154,28 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_LONG).show();
             }
         }
-        mNotification.activate();
+    }
+
+
+    private void addNotification(Notification notification, int delay) {
+
+        Intent notificationIntent = new Intent(this, NotificationReceiver.class);
+        notificationIntent.putExtra(NotificationReceiver.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(NotificationReceiver.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    }
+
+    private Notification getNotification(String content) {
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle(getString(R.string.app_name));
+        builder.setContentText(content);
+        builder.setContentIntent(mContentIntent);
+        builder.setSmallIcon(android.R.drawable.ic_menu_camera);
+        return builder.build();
     }
 
 }
